@@ -20,6 +20,9 @@
         "dist"
     ],
     "author": "str <str_ie@yahoo.co.uk>",
+    "bin": {
+        "image-checker": "./dist/lib/cli.js"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/mrseanryan/image-checker.git"
@@ -31,11 +34,16 @@
     "scripts": {
         "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
         "prebuild": "rimraf dist",
-        "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
+        "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src && yarn build:cli",
+        "build:cli": "echo #!/usr/bin/env node > dist/lib/cli.js && cat dist/lib/main.js >> dist/lib/cli.js && chmod +x dist/lib/cli.js",
+        "build:minimal": "tsc --module commonjs",
+        "build-and-test": "yarn build:minimal && yarn test",
+        "log:dist": "ls dist -lR",
+        "preinstall": "npm run build:cli",
         "start": "rollup -c rollup.config.ts -w",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watch",
-        "test:prod": "npm run lint && npm run test -- --no-cache",
+        "test:prod": "npm run build && npm run lint && npm run test -- --no-cache",
         "deploy-docs": "ts-node tools/gh-pages-publish",
         "report-coverage": "cat ./coverage/lcov.info | coveralls",
         "commit": "git-cz",
@@ -43,7 +51,7 @@
         "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
         "precommit": "lint-staged",
         "travis-deploy-once": "travis-deploy-once",
-        "prepush": "npm run test:prod && npm run build"
+        "prepush": "npm run test:prod"
     },
     "lint-staged": {
         "{src,test}/**/*.ts": [
@@ -68,8 +76,13 @@
             "js"
         ],
         "coveragePathIgnorePatterns": [
+            "/itest/",
             "/node_modules/",
-            "/test/"
+            "/static/",
+            "/test/",
+            "/testUtils/",
+            "/tools/",
+            "main.ts"
         ],
         "coverageThreshold": {
             "global": {
