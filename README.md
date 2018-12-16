@@ -1,10 +1,12 @@
-# :camera: image-checker readme
+# :heavy_check_mark: image-checker readme
 
-Command line tool to auto-classify images, renaming them with appropriate address and labels. Uses Node.js and the Google Geocoding and Vision APIs.
+Check the quality of an image for defects including blur, under-exposure, over-exposure and low contrast.
+
+Can be used via node.js as a command line tool or as a library.
 
 ## status - !in development!
 
-image-checker is in development (Linux, Mac, Windows) following semantic versioning.
+image-checker is in ongoing development (Linux, Mac, Windows) following semantic versioning.
 
 [![Travis](https://img.shields.io/travis/mrseanryan/image-checker.svg)](https://travis-ci.org/mrseanryan/image-checker)
 [![node](https://img.shields.io/node/v/image-checker.svg)](https://nodejs.org)
@@ -26,13 +28,13 @@ image-checker is in development (Linux, Mac, Windows) following semantic version
 
 Node.js seems to lack a library that indicates the quality of an image.
 
-Hopefully can save some time spent on manually inspecting photos!
+Hopefully using this library/cli, you can save some time spent on manually inspecting photos!
 
 ## dependencies
 
 - Node 8.11.3 or higher
 
-## features
+## features (in development!)
 
 - library to give quality measurements of a given image
 - also can be used as CLI (command line tool)
@@ -42,7 +44,7 @@ Hopefully can save some time spent on manually inspecting photos!
   - over exposure (via histogram)
   - low contrast (via histogram)
 
-### future features
+### possible future features
 
 faces:
 
@@ -138,7 +140,7 @@ Install inside your npm project:
 Then in TypeScript, you can import the library:
 
 ```ts
-import * as ic from 'image-checker'
+import * as ic from "image-checker";
 ```
 
 // TODO xxx

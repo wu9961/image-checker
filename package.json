@@ -1,8 +1,18 @@
 {
   "name": "image-checker",
   "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Check the quality of an image for defects including blur, under-exposure, over-exposure and low contrast.",
+  "keywords": [
+    "image",
+    "photo",
+    "image quality",
+    "photo quality",
+    "blur",
+    "under-exposure",
+    "over-exposure",
+    "exposure",
+    "contrast"
+  ],
   "main": "dist/image-checker.umd.js",
   "module": "dist/image-checker.es5.js",
   "typings": "dist/types/image-checker.d.ts",
@@ -12,11 +22,11 @@
   "author": "str <str_ie@yahoo.co.uk>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/mrseanryan/image-checker.git"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.3.0"
   },
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
@@ -73,8 +83,8 @@
     ]
   },
   "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "semi": true,
+    "singleQuote": false
   },
   "commitlint": {
     "extends": [
