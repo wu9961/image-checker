@@ -9,6 +9,7 @@ Can be used via node.js as a command line tool or as a library.
 image-checker is in ongoing development (Linux, Mac, Windows) following semantic versioning.
 
 [![Travis](https://img.shields.io/travis/mrseanryan/image-checker.svg)](https://travis-ci.org/mrseanryan/image-checker)
+[![Coveralls](https://img.shields.io/coveralls/mrseanryan/image-checker.svg)](https://coveralls.io/github/mrseanryan/image-checker)
 [![node](https://img.shields.io/node/v/image-checker.svg)](https://nodejs.org)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mrseanryan/image-checker.svg)](https://greenkeeper.io/)
@@ -32,31 +33,31 @@ Hopefully using this library/cli, you can save some time spent on manually inspe
 
 ## dependencies
 
-- Node 8.11.3 or higher
+-   Node 8.11.3 or higher
 
 ## features (in development!)
 
-- library to give quality measurements of a given image
-- also can be used as CLI (command line tool)
-- gives a score for the following quality measures:
-  - blurring (via edge width detection)
-  - under exposure (via histogram)
-  - over exposure (via histogram)
-  - low contrast (via histogram)
+-   library to give quality measurements of a given image
+-   also can be used as CLI (command line tool)
+-   gives a score for the following quality measures:
+    -   blurring (via edge width detection)
+    -   under exposure (via histogram)
+    -   over exposure (via histogram)
+    -   low contrast (via histogram)
 
 ### possible future features
 
 faces:
 
-- face alignment (e.g. are eyes horizontal)
-- Face not centered
-- Face out of frame
-- Faces detected, but no strong sentiment
+-   face alignment (e.g. are eyes horizontal)
+-   Face not centered
+-   Face out of frame
+-   Faces detected, but no strong sentiment
 
 printing:
 
-- dpi not high enough for A4 or photo print
-- check exif for presence of sRGB
+-   dpi not high enough for A4 or photo print
+-   check exif for presence of sRGB
 
 ## usage - as cli (command line tool)
 
@@ -64,8 +65,8 @@ printing:
 
 Install:
 
-- Yarn
-- Node 8.3.11 (or higher)
+-   Yarn
+-   Node 8.3.11 (or higher)
 
 ### 2 Check images
 
@@ -73,9 +74,9 @@ Install:
 
 You can run `image-checker` in one of three ways:
 
-- a) as a globally installed command line tool (this is the easiest way)
-- OR b) as an npm package inside an npm project
-- OR c) from the source code
+-   a) as a globally installed command line tool (this is the easiest way)
+-   OR b) as an npm package inside an npm project
+-   OR c) from the source code
 
 ##### a) install globally as a command line tool
 
