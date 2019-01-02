@@ -6,7 +6,9 @@ Can be used via node.js as a command line tool or as a library.
 
 ## status - !in development!
 
-image-checker is in ongoing development (Linux, Mac, Windows) following semantic versioning.
+image-checker is in _very early_ stages of development (Windows, Linux Ubuntu) following semantic versioning.
+
+Please come back later!
 
 [![Travis](https://img.shields.io/travis/mrseanryan/image-checker.svg)](https://travis-ci.org/mrseanryan/image-checker)
 [![Coveralls](https://img.shields.io/coveralls/mrseanryan/image-checker.svg)](https://coveralls.io/github/mrseanryan/image-checker)
@@ -81,6 +83,10 @@ You can run `image-checker` in one of three ways:
 ##### a) install globally as a command line tool
 
 `npm i -g image-checker@latest --production`
+
+On Ubuntu, you may need administrator permissions via `sudo`:
+
+`sudo npm i -g image-checker@latest --production`
 
 To use:
 
