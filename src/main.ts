@@ -1,5 +1,3 @@
-import * as clc from "cli-color";
-
 import { ImageChecker } from "./checker/ImageChecker";
 
 const argv = require("yargs")
@@ -8,21 +6,16 @@ const argv = require("yargs")
 
 const pathToImage = argv._[0];
 
-const errorStyle = clc.black.bgRed;
-const normalStyle = clc.green;
-const successStyle = clc.black.bgGreen;
-const warningStyle = clc.black.bgYellow;
-
-console.log(normalStyle(`Checking image at '${pathToImage}' ...`));
+console.log(`Checking image at '${pathToImage}' ...`);
 
 try {
     const result = ImageChecker.checkImageAtPath(pathToImage);
 
     if (result.isOk) {
-        console.log(successStyle(result));
+        console.log(result);
     } else {
-        console.warn(warningStyle(result));
+        console.warn(result);
     }
 } catch (error) {
-    console.error(errorStyle("[error]", error));
+    console.error("[error]", error);
 }
